@@ -6,6 +6,10 @@
 # bail out on error
 set -e
 
+# change to directory containing the relevant scripts
+OLD_DIR=$(pwd)
+cd ./01/
+
 #Usage: 011-time.sh [-h] [OPTIONS]
 #OPTIONS:
 #	--winboot	Set hwclock with '--localtime' flag (Useful when dual booting with Windows)
@@ -33,3 +37,7 @@ bash 012-locale.sh --lang en_US.UTF-8 --form de_DE.UTF-8 en_US,de_DE
 #	--font FNT	font as found under /usr/share/kbd/consolefonts/*.psfu?.gz
 echo "Setting up host..."
 bash 013-host.sh --keymap de-latin1-nodeadkeys --font Lat2-Terminus16
+
+# change back to old directory
+cd $OLD_DIR
+

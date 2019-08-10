@@ -6,6 +6,10 @@
 # bail out on error
 set -e
 
+# change to directory containing the relevant scripts
+OLD_DIR=$(pwd)
+cd ./11/
+
 #Usage: 111-intel.sh [-h] [OPTIONS]
 #OPTIONS:
 #	--vulkan	install vulkan-intel drivers
@@ -15,3 +19,6 @@ bash 111-intel.sh --vulkan --skylake
 
 #Usage: 112-filesystem.sh [-h]
 bash 112-filesystem.sh
+
+# change back to old directory
+cd $OLD_DIR
