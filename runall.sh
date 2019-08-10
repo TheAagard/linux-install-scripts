@@ -2,6 +2,6 @@
 
 set -e
 
-for script in $(ls *0-*.sh | sort); do
+for script in $(ls | grep -E "[0-9]{2}-\w*\.sh" | sort); do
     bash $script
 done
