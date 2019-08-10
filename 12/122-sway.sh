@@ -14,7 +14,7 @@ usage() {
 }
 
 install() {
-    PKGS="sway swaylock waybar "
+    PKGS="sway swaylock waybar"
 
     pacman -Syq --needed --noconfirm $PKGS
 }
