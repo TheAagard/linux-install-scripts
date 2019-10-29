@@ -14,7 +14,7 @@ usage() {
 }
 
 install() {
-    PKGS="sway swaylock waybar"
+    PKGS="sway swaylock i3status"
 
     pacman -Syq --needed --noconfirm $PKGS
 }
