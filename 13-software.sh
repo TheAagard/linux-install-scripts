@@ -13,6 +13,7 @@ WAYLT="grim slurp wl-clipboard"
 XORGT="xclip"
 TOOLS="htop ranger"
 INETS="firefox"
+MEDIA="vlc"
 
 PKGS="$SYSTM"
 if $DEVELOP; then
@@ -21,7 +22,7 @@ fi
 if $WAYLAND; then
     PKGS+=" $WAYLT"
 fi
-PKGS+=" $TOOLS $INETS"
+PKGS+=" $TOOLS $INETS $MEDIA"
 
 # installation
 pacman -Syq --needed --noconfirm $PKGS
